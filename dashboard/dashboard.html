@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ArenaHub | Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/dashboard-design.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+            <div class="logo">
+
+                <div class="logo-icon">🎮</div>
+
+                <h2>ArenaHub</h2>
+
+            </div>
+            <ul class="sidebar-menu">
+
+                <li class="active">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </li>
+
+                <li>
+                    <i data-lucide="trophy"></i>
+                    <span>Tournaments</span>
+                </li>
+
+                <li>
+                    <i data-lucide="users"></i>
+                    <span>Teams</span>
+                </li>
+
+                <li>
+                    <i data-lucide="user-round"></i>
+                    <span>Players</span>
+                </li>
+
+                <li>
+                    <i data-lucide="gamepad-2"></i>
+                    <span>Games</span>
+                </li>
+
+                <li>
+                    <i data-lucide="calendar-days"></i>
+                    <span>Schedule</span>
+                </li>
+
+                <li>
+                    <i data-lucide="git-branch"></i>
+                    <span>Brackets</span>
+                </li>
+
+                <li>
+                    <i data-lucide="bar-chart-3"></i>
+                    <span>Analytics</span>
+                </li>
+
+                <li>
+                    <i data-lucide="settings"></i>
+                    <span>Settings</span>
+                </li>
+
+            </ul>
+        </div>
+
+        <button class="logout-btn">
+
+            Logout
+
+        </button>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- HEADER -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Welcome Back, John 👋</h1>
+
+                <p>Manage your tournaments and esports organization.</p>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="search-box">
+
+                    <i data-lucide="search"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Search tournaments...">
+
+                </div>
+
+                <button class="icon-btn">
+                    <i data-lucide="bell"></i>
+                </button>
+
+                <button class="icon-btn">
+                    <i data-lucide="message-circle"></i>
+                </button>
+
+                <img
+                    src="https://i.pravatar.cc/100"
+                    class="profile-img"
+                    alt="Profile">
+
+            </div>
+
+        </header>
+
+        <!-- HERO -->
+
+        <section class="hero-banner">
+
+            <div class="hero-overlay">
+
+                <span class="live-tag">
+
+                    🔥 FEATURED TOURNAMENT
+
+                </span>
+
+                <h2>
+
+                    Valorant Champions League 2026
+
+                </h2>
+
+                <p>
+
+                    Registration closes in <strong>2 Days</strong>.
+                    Invite your team and compete for the championship.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button class="primary-btn">
+
+                        Register Team
+
+                    </button>
+
+                    <button class="secondary-btn">
+
+                        View Tournament
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- STATS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <i data-lucide="trophy"></i>
+
+                <h2>12</h2>
+
+                <p>Active Tournaments</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i data-lucide="users"></i>
+
+                <h2>58</h2>
+
+                <p>Registered Teams</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i data-lucide="user-round"></i>
+
+                <h2>740</h2>
+
+                <p>Players</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i data-lucide="monitor-play"></i>
+
+                <h2>16</h2>
+
+                <p>Live Matches</p>
+
+            </div>
+
+        </section>
+
+        <!-- CONTENT GRID -->
+
+        <section class="content-grid">
+
+            <!-- LEFT -->
+
+            <div class="left-column">
+
+                <div class="card">
+
+                    <h3>Upcoming Matches</h3>
+
+                    <div class="match-card">
+
+                        <div>
+
+                            <h4>Team Eclipse</h4>
+
+                            <span>VS</span>
+                            <h4>Team Nova</h4>
+
+                        </div>
+
+                        <p>
+
+                            Today • 8:00 PM
+
+                        </p>
+
+                    </div>
+
+                    <div class="match-card">
+
+                        <div>
+
+                            <h4>Team Omega</h4>
+
+                            <span>VS</span>
+                            <h4>Team Alpha</h4>
+
+                        </div>
+
+                        <p>
+
+                            Tomorrow • 3:00 PM
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Recent Activity</h3>
+
+                    <ul class="activity-list">
+
+                        <li>🏆 Team Nova joined Valorant Cup.</li>
+
+                        <li>🎮 New CS2 tournament created.</li>
+
+                        <li>📈 Rankings updated.</li>
+
+                        <li>✅ Match results submitted.</li>
+
+                        <li>👥 Team Eclipse registered.</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="right-column">
+
+                <div class="card">
+
+                    <h3>Leaderboard</h3>
+
+                    <ol class="leaderboard">
+
+                        <li>🥇 Team Eclipse</li>
+
+                        <li>🥈 Team Nova</li>
+
+                        <li>🥉 Team Alpha</li>
+
+                        <li>4. Team Omega</li>
+
+                        <li>5. Team Legacy</li>
+
+                    </ol>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Quick Actions</h3>
+
+                    <div class="quick-actions">
+
+                        <button>Create Tournament</button>
+
+                        <button>Add Team</button>
+
+                        <button>Add Player</button>
+
+                        <button>Generate Bracket</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script>
+
+    lucide.createIcons();
+
+</script>
+
+</body>
+
+</html>
