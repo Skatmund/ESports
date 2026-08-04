@@ -240,7 +240,7 @@ body{
 ======================================== */
 
 .main-content{
-    
+
     margin-left: 280px;
 
     width: calc(100% - 280px);
@@ -1364,4 +1364,74 @@ body{
 
     transform:scale(1.15);
 
+}
+
+/* PROFILE DROPDOWN */
+
+.profile-menu{
+    position:relative;
+}
+
+.profile-img{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    cursor:pointer;
+    border:2px solid #3b82f6;
+    transition:.3s;
+}
+
+.profile-img:hover{
+    transform:scale(1.05);
+}
+
+.dropdown-menu{
+    position:absolute;
+    top:60px;
+    right:0;
+
+    width:180px;
+
+    background:#111827;
+    border:1px solid #1f2937;
+    border-radius:14px;
+
+    overflow:hidden;
+
+    display:none;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.45);
+
+    z-index:1000;
+}
+
+.dropdown-menu.show{
+    display:block;
+}
+
+.dropdown-menu a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:14px 18px;
+
+    color:#d1d5db;
+    text-decoration:none;
+
+    transition:.25s;
+}
+
+.dropdown-menu a:hover{
+    background:#1e293b;
+    color:white;
+}
+
+.logout-link{
+    color:#ef4444;
+}
+
+.logout-link:hover{
+    background:#7f1d1d;
+    color:white;
 }
