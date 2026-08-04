@@ -1,0 +1,41 @@
+.login-options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:-5px;
+
+    margin-bottom:10px;
+
+    font-size:14px;
+
+}
+
+.remember-me{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#cbd5e1;
+
+}
+
+.login-options a{
+
+    color:#3b82f6;
+
+    text-decoration:none;
+
+}
+
+.login-options a:hover{
+
+    color:#60a5fa;
+
+}
