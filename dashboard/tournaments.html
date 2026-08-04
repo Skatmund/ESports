@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ArenaHub | Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/dashboard-design.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+            <div class="logo">
+
+                <div class="logo-icon">🎮</div>
+
+                <h2>ArenaHub</h2>
+
+            </div>
+            <ul class="sidebar-menu">
+
+                <li class="active">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </li>
+
+                <li>
+                    <i data-lucide="trophy"></i>
+                    <span>Tournaments</span>
+                </li>
+
+                <li>
+                    <i data-lucide="users"></i>
+                    <span>Teams</span>
+                </li>
+
+                <li>
+                    <i data-lucide="user-round"></i>
+                    <span>Players</span>
+                </li>
+
+                <li>
+                    <i data-lucide="gamepad-2"></i>
+                    <span>Games</span>
+                </li>
+
+                <li>
+                    <i data-lucide="calendar-days"></i>
+                    <span>Schedule</span>
+                </li>
+
+                <li>
+                    <i data-lucide="git-branch"></i>
+                    <span>Brackets</span>
+                </li>
+
+                <li>
+                    <i data-lucide="bar-chart-3"></i>
+                    <span>Analytics</span>
+                </li>
+            </ul>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- PAGE HEADER -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Tournament Manager</h1>
+
+                <p>Create, manage, and monitor all esports tournaments. </p>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="search-box">
+
+                    <i data-lucide="search"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Search tournaments...">
+
+                </div>
+
+                <button class="icon-btn">
+                    <i data-lucide="bell"></i>
+                </button>
+
+                <button class="icon-btn">
+                    <i data-lucide="message-circle"></i>
+                </button>
+
+                <div class="profile-menu">
+
+                    <img
+                        src="https://i.pravatar.cc/100"
+                        class="profile-img"
+                        id="profileBtn"
+                        alt="Profile">
+
+                    <div class="dropdown-menu" id="dropdownMenu">
+
+                        <a href="settings.html">
+                            <i data-lucide="settings"></i>
+                            Settings
+                        </a>
+
+                        <a href="../login.html" class="logout-link">
+                            <i data-lucide="log-out"></i>
+                            Logout
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- TOURNAMENT STATISTICS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <i data-lucide="trophy"></i>
+
+                <h2>12</h2>
+
+                <p>Active Tournaments</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i data-lucide="clipboard-check"></i>
+
+                <h2>5</h2>
+
+                <p>Open Registration</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i data-lucide="check-circle-2"></i>
+
+                <h2>48</h2>
+
+                <p>Completed</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i data-lucide="users"></i>
+
+                <h2>1248</h2>
+
+                <p>Total Participants</p>
+
+            </div>
+
+        </section>
+
+        <!-- FILTERS -->
+
+        <section class="card">
+
+            <div class="filter-bar">
+
+                <input
+                    type="text"
+                    placeholder="Search tournament...">
+
+                <select>
+
+                    <option>All Games</option>
+                    <option>Valorant</option>
+                    <option>League of Legends</option>
+                    <option>DOTA 2</option>
+                    <option>Counter-Strike 2</option>
+
+                </select>
+
+                <select>
+
+                    <option>All Status</option>
+                    <option>Registration Open</option>
+                    <option>Ongoing</option>
+                    <option>Completed</option>
+
+                </select>
+
+                <select>
+
+                    <option>Newest</option>
+                    <option>Oldest</option>
+
+                </select>
+
+                <button class="create-btn">
+
+                    <i data-lucide="plus"></i>
+
+                    Create Tournament
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- TOURNAMENT TABLE -->
+
+        <section class="card">
+
+            <h3>All Tournaments</h3>
+
+            <table class="tournament-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Tournament</th>
+
+                        <th>Game</th>
+
+                        <th>Status</th>
+
+                        <th>Teams</th>
+
+                        <th>Date</th>
+
+                        <th>Prize Pool</th>
+
+                        <th>Actions</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+
+                            Valorant Champions League
+
+                        </td>
+
+                        <td>Valorant</td>
+
+                        <td>
+
+                            <span class="status open">
+
+                                Registration Open
+
+                            </span>
+
+                        </td>
+
+                        <td>28 / 32</td>
+
+                        <td>Aug 20, 2026</td>
+
+                        <td>$5,000</td>
+
+                        <td>
+
+                            <button class="table-btn view">
+
+                                View
+
+                            </button>
+
+                            <button class="table-btn edit">
+
+                                Edit
+
+                            </button>
+
+                            <button class="table-btn delete">
+
+                                Delete
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>DOTA 2 Summer Invitational</td>
+
+                        <td>DOTA 2</td>
+
+                        <td>
+
+                            <span class="status ongoing">
+
+                                Ongoing
+
+                            </span>
+
+                        </td>
+
+                        <td>16 / 16</td>
+
+                        <td>Aug 25, 2026</td>
+
+                        <td>$10,000</td>
+
+                        <td>
+
+                            <button class="table-btn view">
+
+                                View
+
+                            </button>
+
+                            <button class="table-btn edit">
+
+                                Edit
+
+                            </button>
+
+                            <button class="table-btn delete">
+
+                                Delete
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>League Masters Cup</td>
+
+                        <td>League of Legends</td>
+
+                        <td>
+
+                            <span class="status completed">
+
+                                Completed
+
+                            </span>
+
+                        </td>
+
+                        <td>32 / 32</td>
+
+                        <td>July 12, 2026</td>
+
+                        <td>$7,500</td>
+
+                        <td>
+
+                            <button class="table-btn view">
+
+                                View
+
+                            </button>
+
+                            <button class="table-btn edit">
+
+                                Edit
+
+                            </button>
+
+                            <button class="table-btn delete">
+
+                                Delete
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>CS2 Arena Showdown</td>
+
+                        <td>Counter-Strike 2</td>
+
+                        <td>
+
+                            <span class="status open">
+
+                                Registration Open
+
+                            </span>
+
+                        </td>
+
+                        <td>22 / 32</td>
+
+                        <td>Sept 5, 2026</td>
+
+                        <td>$4,000</td>
+
+                        <td>
+
+                            <button class="table-btn view">
+
+                                View
+
+                            </button>
+
+                            <button class="table-btn edit">
+
+                                Edit
+
+                            </button>
+
+                            <button class="table-btn delete">
+
+                                Delete
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+</div>
+
+<script>lucide.createIcons();</script>
+<script src="../assets/js/dashboard.js"></script>
+<script>lucide.createIcons();</script>
+
+</body>
+
+</html>

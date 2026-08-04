@@ -1435,3 +1435,395 @@ body{
     background:#7f1d1d;
     color:white;
 }
+
+/* ========================================
+   TOURNAMENT FILTER BAR
+======================================== */
+
+.filter-bar{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.filter-bar input{
+
+    flex:2;
+
+}
+
+.filter-bar select{
+
+    flex:1;
+
+}
+
+.filter-bar input,
+.filter-bar select{
+
+    flex:1;
+
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    background:#0f172a;
+
+    color:white;
+
+    outline:none;
+
+    transition:.3s;
+
+    font-size:14px;
+
+}
+
+.filter-bar input:focus,
+.filter-bar select:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 10px rgba(37,99,235,.2);
+
+}
+
+.filter-bar select{
+
+    cursor:pointer;
+
+}
+
+.create-btn {
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:13px 22px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    white-space:nowrap;
+
+}
+
+.create-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+.create-btn svg{
+
+    width:18px;
+
+    height:18px;
+
+}
+
+/* ========================================
+   TOURNAMENT TABLE
+======================================== */
+
+.tournament-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:25px;
+
+}
+
+.tournament-table thead{
+
+    background:#0f172a;
+
+}
+
+.tournament-table th{
+
+    text-align:left;
+
+    padding:18px;
+
+    color:#94a3b8;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.tournament-table td{
+
+    padding:20px 18px;
+
+    border-bottom:1px solid #1e293b;
+
+    transition:.3s;
+
+}
+
+.tournament-table tbody tr{
+
+    transition:.3s;
+
+}
+
+.tournament-table tbody tr:hover{
+
+    background:#162033;
+
+}
+
+/* ========================================
+   STATUS BADGES
+======================================== */
+
+.status{
+
+    display:inline-block;
+
+    padding:8px 14px;
+
+    border-radius:50px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.status.open{
+
+    background:rgba(34,197,94,.15);
+
+    color:#22c55e;
+
+}
+
+.status.ongoing{
+
+    background:rgba(59,130,246,.15);
+
+    color:#3b82f6;
+
+}
+
+.status.completed{
+
+    background:rgba(107,114,128,.15);
+
+    color:#cbd5e1;
+
+}
+
+/* ========================================
+   TABLE BUTTONS
+======================================== */
+
+.table-btn{
+
+    border:none;
+
+    padding:9px 15px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    margin-right:8px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.table-btn:last-child{
+
+    margin-right:0;
+
+}
+
+.table-btn.view{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+.table-btn.view:hover{
+
+    background:#1d4ed8;
+
+}
+
+.table-btn.edit{
+
+    background:#f59e0b;
+
+    color:white;
+
+}
+
+.table-btn.edit:hover{
+
+    background:#d97706;
+
+}
+
+.table-btn.delete{
+
+    background:#dc2626;
+
+    color:white;
+
+}
+
+.table-btn.delete:hover{
+
+    background:#b91c1c;
+
+}
+
+/* ========================================
+   CREATE BUTTON
+======================================== */
+
+.topbar .primary-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+/* ========================================
+   TABLE ANIMATION
+======================================== */
+
+.tournament-table tbody tr{
+
+    animation:fadeIn .4s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ========================================
+   RESPONSIVE TABLE
+======================================== */
+
+@media(max-width:1100px){
+
+    .tournament-table{
+
+        display:block;
+
+        overflow-x:auto;
+
+        white-space:nowrap;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .filter-bar{
+
+        flex-direction:column;
+
+    }
+
+    .filter-bar input,
+    .filter-bar select{
+
+        width:100%;
+
+    }
+
+    .topbar{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .topbar-right{
+
+        width:100%;
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    .topbar .primary-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
