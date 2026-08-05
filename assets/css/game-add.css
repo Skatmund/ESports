@@ -1,0 +1,476 @@
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.page-header{
+    margin-bottom:30px;
+}
+
+.page-header h1{
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.page-header p{
+    color:#94a3b8;
+    font-size:15px;
+}
+
+
+/* ==========================================
+   GAME FORM
+========================================== */
+
+.game-form{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+
+/* ==========================================
+   FORM CARD
+========================================== */
+
+.form-card{
+    background:#111827;
+
+    border:1px solid #1e293b;
+    border-radius:18px;
+
+    padding:30px;
+
+    transition:.3s;
+}
+
+.form-card:hover{
+    border-color:#334155;
+}
+
+.form-card h2{
+    font-size:21px;
+    font-weight:600;
+
+    margin-bottom:25px;
+}
+
+
+/* ==========================================
+   FORM GRID
+========================================== */
+
+.form-grid{
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+}
+
+
+/* ==========================================
+   FORM GROUP
+========================================== */
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    margin-bottom:10px;
+
+    color:#cbd5e1;
+
+    font-size:14px;
+    font-weight:600;
+}
+
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+.form-group input,
+.form-group select{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    background:#0f172a;
+
+    color:#fff;
+
+    border:1px solid #334155;
+
+    border-radius:12px;
+
+    font-size:14px;
+
+    transition:.3s;
+}
+
+.form-group input:hover,
+.form-group select:hover{
+    border-color:#475569;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+}
+
+
+/* ==========================================
+   PLACEHOLDER
+========================================== */
+
+::placeholder{
+    color:#64748b;
+}
+
+
+/* ==========================================
+   SELECT
+========================================== */
+
+.form-group select{
+    cursor:pointer;
+}
+
+.form-group select option{
+    background:#0f172a;
+    color:#fff;
+}
+
+
+/* ==========================================
+   TEXTAREA
+========================================== */
+
+.form-card textarea{
+
+    width:100%;
+
+    min-height:160px;
+
+    padding:16px;
+
+    background:#0f172a;
+
+    color:#fff;
+
+    border:1px solid #334155;
+
+    border-radius:12px;
+
+    resize:vertical;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    transition:.3s;
+}
+
+.form-card textarea:hover{
+    border-color:#475569;
+}
+
+.form-card textarea:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+}
+
+
+/* ==========================================
+   UPLOAD BOX
+========================================== */
+
+.upload-box{
+
+    min-height:230px;
+
+    border:2px dashed #334155;
+
+    border-radius:16px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+    background:#0f172a;
+
+    transition:.3s;
+}
+
+.upload-box:hover{
+
+    border-color:#2563eb;
+
+    background:#111c32;
+}
+
+
+/* ==========================================
+   UPLOAD ICON
+========================================== */
+
+.upload-box svg{
+
+    width:45px;
+    height:45px;
+
+    color:#3b82f6;
+
+    margin-bottom:15px;
+}
+
+
+/* ==========================================
+   UPLOAD TEXT
+========================================== */
+
+.upload-box h3{
+
+    font-size:18px;
+
+    margin-bottom:8px;
+}
+
+.upload-box p{
+
+    color:#64748b;
+
+    font-size:13px;
+
+    margin-bottom:20px;
+}
+
+
+/* ==========================================
+   FILE INPUT
+========================================== */
+
+.upload-box input[type="file"]{
+
+    background:#1e293b;
+
+    color:#cbd5e1;
+
+    padding:10px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+}
+
+.upload-box input[type="file"]::file-selector-button{
+
+    background:#2563eb;
+
+    color:#fff;
+
+    border:none;
+
+    padding:10px 15px;
+
+    border-radius:8px;
+
+    margin-right:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.upload-box input[type="file"]::file-selector-button:hover{
+    background:#1d4ed8;
+}
+
+
+/* ==========================================
+   FORM ACTIONS
+========================================== */
+
+.form-actions{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:5px;
+
+    padding-bottom:30px;
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.primary-btn,
+.secondary-btn{
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    padding:14px 26px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+
+/* ==========================================
+   ADD GAME BUTTON
+========================================== */
+
+.primary-btn{
+
+    background:#2563eb;
+
+    color:#fff;
+}
+
+.primary-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+}
+
+.primary-btn:active{
+    transform:translateY(0);
+}
+
+.primary-btn svg{
+
+    width:19px;
+    height:19px;
+}
+
+
+/* ==========================================
+   CANCEL BUTTON
+========================================== */
+
+.secondary-btn{
+
+    background:#1e293b;
+
+    color:#cbd5e1;
+
+    border:1px solid #334155;
+}
+
+.secondary-btn:hover{
+
+    background:#334155;
+
+    color:#fff;
+}
+
+
+/* ==========================================
+   NUMBER INPUT
+========================================== */
+
+input[type="number"]{
+    appearance:textfield;
+    -moz-appearance:textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+
+    -webkit-appearance:none;
+
+    margin:0;
+}
+
+
+/* ==========================================
+   RESPONSIVE - TABLET
+========================================== */
+
+@media(max-width:900px){
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+
+@media(max-width:600px){
+
+    .page-header h1{
+        font-size:28px;
+    }
+
+    .form-card{
+        padding:20px;
+    }
+
+    .upload-box{
+        padding:20px;
+    }
+
+    .form-actions{
+
+        flex-direction:column-reverse;
+
+        align-items:stretch;
+    }
+
+    .primary-btn,
+    .secondary-btn{
+
+        width:100%;
+    }
+
+}
