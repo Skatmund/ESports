@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ArenaHub | Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/dashboard-design.css">
+    <link rel="stylesheet" href="../assets/css/games-design.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+            <div class="logo">
+
+                <div class="logo-icon">🎮</div>
+
+                <h2>ArenaHub</h2>
+
+            </div>
+            <ul class="sidebar-menu">
+
+                <li>
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </li>
+
+                <li>
+                    <i data-lucide="trophy"></i>
+                    <span>Tournaments</span>
+                </li>
+
+                <li>
+                    <i data-lucide="users"></i>
+                    <span>Teams</span>
+                </li>
+
+                <li>
+                    <i data-lucide="user-round"></i>
+                    <span>Players</span>
+                </li>
+
+                <li class="active">
+                    <i data-lucide="gamepad-2"></i>
+                    <span>Games</span>
+                </li>
+
+                <li>
+                    <i data-lucide="calendar-days"></i>
+                    <span>Schedule</span>
+                </li>
+
+                <li>
+                    <i data-lucide="git-branch"></i>
+                    <span>Brackets</span>
+                </li>
+
+                <li>
+                    <i data-lucide="bar-chart-3"></i>
+                    <span>Analytics</span>
+                </li>
+            </ul>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+    <!-- HEADER -->
+
+    <header class="topbar">
+
+        <div>
+
+            <h1>Games Management</h1>
+
+            <p>Manage the games available for tournaments and competitions.</p>
+
+        </div>
+
+        <div class="topbar-right">
+
+            <div class="search-box">
+
+                <i data-lucide="search"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search tournaments...">
+
+            </div>
+
+            <button class="icon-btn">
+                <i data-lucide="bell"></i>
+            </button>
+
+            <button class="icon-btn">
+                <i data-lucide="message-circle"></i>
+            </button>
+
+            <div class="profile-menu">
+
+                <img
+                    src="https://i.pravatar.cc/100"
+                    class="profile-img"
+                    id="profileBtn"
+                    alt="Profile">
+
+                <div class="dropdown-menu" id="dropdownMenu">
+
+                    <a href="settings.html">
+                        <i data-lucide="settings"></i>
+                        Settings
+                    </a>
+
+                    <a href="../login.html" class="logout-link">
+                        <i data-lucide="log-out"></i>
+                        Logout
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- STATS -->
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+            <i data-lucide="gamepad-2"></i>
+            <h2>18</h2>
+            <p>Supported Games</p>
+        </div>
+
+        <div class="stat-card">
+            <i data-lucide="trophy"></i>
+            <h2>47</h2>
+            <p>Active Tournaments</p>
+        </div>
+
+        <div class="stat-card">
+            <i data-lucide="users"></i>
+            <h2>740</h2>
+            <p>Registered Players</p>
+        </div>
+
+        <div class="stat-card">
+            <i data-lucide="activity"></i>
+            <h2>12</h2>
+            <p>Popular Games</p>
+        </div>
+
+    </section>
+
+    <!-- FILTER BAR -->
+
+    <section class="filters">
+
+        <div class="filter-left">
+
+            <input
+                type="text"
+                placeholder="Search game...">
+
+            <select>
+
+                <option>All Genres</option>
+                <option>FPS</option>
+                <option>MOBA</option>
+                <option>Battle Royale</option>
+                <option>Sports</option>
+
+            </select>
+
+            <select>
+
+                <option>All Status</option>
+                <option>Active</option>
+                <option>Inactive</option>
+
+            </select>
+
+        </div>
+
+        <button class="create-btn">
+
+            + Add Game
+
+        </button>
+
+    </section>
+
+    <!-- GAME GRID -->
+
+    <section class="game-grid">
+
+        <!-- CARD -->
+
+        <div class="game-card">
+
+            <img src="../assets/images/valorant.jpg">
+
+            <div class="game-info">
+
+                <h3>Valorant</h3>
+
+                <p>First-Person Tactical Shooter</p>
+
+                <div class="game-meta">
+
+                    <span>12 Tournaments</span>
+
+                    <span class="status active">
+                        Active
+                    </span>
+
+                </div>
+
+                <div class="game-actions">
+
+                    <button class="view-btn">
+                        View
+                    </button>
+
+                    <button class="edit-btn">
+                        Edit
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="game-card">
+
+            <img src="../assets/images/cs2.jpg">
+
+            <div class="game-info">
+
+                <h3>Counter-Strike 2</h3>
+
+                <p>First-Person Shooter</p>
+
+                <div class="game-meta">
+
+                    <span>8 Tournaments</span>
+
+                    <span class="status active">
+                        Active
+                    </span>
+
+                </div>
+
+                <div class="game-actions">
+
+                    <button class="view-btn">
+                        View
+                    </button>
+
+                    <button class="edit-btn">
+                        Edit
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="game-card">
+
+            <img src="../assets/images/dota2.jpg">
+
+            <div class="game-info">
+
+                <h3>Dota 2</h3>
+
+                <p>MOBA</p>
+
+                <div class="game-meta">
+
+                    <span>6 Tournaments</span>
+
+                    <span class="status active">
+                        Active
+                    </span>
+
+                </div>
+
+                <div class="game-actions">
+
+                    <button class="view-btn">
+                        View
+                    </button>
+
+                    <button class="edit-btn">
+                        Edit
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="game-card">
+
+            <img src="../assets/images/lol.jpg">
+
+            <div class="game-info">
+
+                <h3>League of Legends</h3>
+
+                <p>MOBA</p>
+
+                <div class="game-meta">
+
+                    <span>9 Tournaments</span>
+
+                    <span class="status active">
+                        Active
+                    </span>
+
+                </div>
+
+                <div class="game-actions">
+
+                    <button class="view-btn">
+                        View
+                    </button>
+
+                    <button class="edit-btn">
+                        Edit
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    </main>
+
+</div>
+
+<script>lucide.createIcons();</script>
+<script src="../assets/js/dashboard.js"></script>
+<script>lucide.createIcons();</script>
+
+</body>
+
+</html>
