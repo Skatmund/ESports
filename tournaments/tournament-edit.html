@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Tournament | ArenaHub</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="../assets/css/dashboard-design.css">
+
+    <link rel="stylesheet"
+          href="../assets/css/tournament-edit.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+            <div class="logo">
+
+                <div class="logo-icon">🎮</div>
+
+                <h2>ArenaHub</h2>
+
+            </div>
+            <ul class="sidebar-menu">
+
+                <li class="active">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </li>
+
+                <li>
+                    <i data-lucide="trophy"></i>
+                    <span>Tournaments</span>
+                </li>
+
+                <li>
+                    <i data-lucide="users"></i>
+                    <span>Teams</span>
+                </li>
+
+                <li>
+                    <i data-lucide="user-round"></i>
+                    <span>Players</span>
+                </li>
+
+                <li>
+                    <i data-lucide="gamepad-2"></i>
+                    <span>Games</span>
+                </li>
+
+                <li>
+                    <i data-lucide="calendar-days"></i>
+                    <span>Schedule</span>
+                </li>
+
+                <li>
+                    <i data-lucide="git-branch"></i>
+                    <span>Brackets</span>
+                </li>
+
+                <li>
+                    <i data-lucide="bar-chart-3"></i>
+                    <span>Analytics</span>
+                </li>
+            </ul>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <!-- PAGE HEADER -->
+
+        <header class="page-header">
+
+            <div>
+
+                <h1>Edit Tournament</h1>
+
+                <p>Update tournament information and settings.</p>
+
+            </div>
+
+        </header>
+
+        <form class="tournament-form">
+
+            <!-- BASIC INFORMATION -->
+
+            <div class="form-card">
+
+                <h2>Basic Information</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>Tournament Name</label>
+
+                        <input
+                            type="text"
+                            value="Valorant Champions 2026">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Game</label>
+
+                        <select>
+
+                            <option selected>Valorant</option>
+                            <option>Counter-Strike 2</option>
+                            <option>Dota 2</option>
+                            <option>League of Legends</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Start Date</label>
+
+                        <input
+                            type="date"
+                            value="2026-08-20">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>End Date</label>
+
+                        <input
+                            type="date"
+                            value="2026-08-25">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- SETTINGS -->
+
+            <div class="form-card">
+
+                <h2>Tournament Settings</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>Bracket Type</label>
+
+                        <select>
+
+                            <option selected>
+                                Single Elimination
+                            </option>
+
+                            <option>
+                                Double Elimination
+                            </option>
+
+                            <option>
+                                Round Robin
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Maximum Teams</label>
+
+                        <select>
+
+                            <option>8</option>
+                            <option selected>16</option>
+                            <option>32</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Registration Deadline</label>
+
+                        <input
+                            type="date"
+                            value="2026-08-18">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Prize Pool</label>
+
+                        <input
+                            type="text"
+                            value="$10,000">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- STATUS -->
+
+            <div class="form-card">
+
+                <h2>Tournament Status</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>Status</label>
+
+                        <select>
+
+                            <option>Upcoming</option>
+                            <option selected>Ongoing</option>
+                            <option>Completed</option>
+                            <option>Cancelled</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Visibility</label>
+
+                        <select>
+
+                            <option selected>Public</option>
+                            <option>Private</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- DESCRIPTION -->
+
+            <div class="form-card">
+
+                <h2>Description</h2>
+
+                <textarea rows="7">
+
+                </textarea>
+
+            </div>
+
+            <!-- BANNER -->
+
+            <div class="form-card">
+
+                <h2>Tournament Banner</h2>
+
+                <div class="banner-preview">
+
+                    <img src="../assets/images/valorant-banner.jpg"
+                         alt="Tournament Banner">
+
+                </div>
+
+                <button
+                    type="button"
+                    class="secondary-btn">
+
+                    <i data-lucide="upload"></i>
+
+                    Change Banner
+
+                </button>
+
+            </div>
+
+            <!-- BUTTONS -->
+
+            <div class="form-actions">
+
+                <button
+                    type="button"
+                    class="cancel-btn">
+
+                    Cancel
+
+                </button>
+
+                <button
+                    type="submit"
+                    class="save-btn">
+
+                    <i data-lucide="save"></i>
+
+                    Save Changes
+
+                </button>
+
+                <button class="danger-btn">
+
+                    <i data-lucide="trash-2"></i>
+
+                    Delete Tournament
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+</div>
+
+<script>
+
+lucide.createIcons();
+
+</script>
+
+</body>
+
+</html>
