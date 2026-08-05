@@ -43,12 +43,12 @@
             </div>
             <ul class="sidebar-menu">
 
-                <li class="active">
+                <li>
                     <i data-lucide="layout-dashboard"></i>
                     <span>Dashboard</span>
                 </li>
 
-                <li>
+                <li class="active">
                     <i data-lucide="trophy"></i>
                     <span>Tournaments</span>
                 </li>
@@ -91,14 +91,74 @@
 
         <!-- HEADER -->
 
+        <header class="topbar">
+
+            <div>
+
+                <h1>Tournaments</h1>
+
+                <p>View ongoing tournaments and matches.</p>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="search-box">
+
+                    <i data-lucide="search"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Search tournaments...">
+
+                </div>
+
+                <button class="icon-btn">
+                    <i data-lucide="bell"></i>
+                </button>
+
+                <button class="icon-btn">
+                    <i data-lucide="message-circle"></i>
+                </button>
+
+                <div class="profile-menu">
+
+                    <img
+                        src="https://i.pravatar.cc/100"
+                        class="profile-img"
+                        id="profileBtn"
+                        alt="Profile">
+
+                    <div class="dropdown-menu" id="dropdownMenu">
+
+                        <a href="settings.html">
+                            <i data-lucide="settings"></i>
+                            Settings
+                        </a>
+
+                        <a href="../login.html" class="logout-link">
+                            <i data-lucide="log-out"></i>
+                            Logout
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- HEADER -->
+
         <header class="page-header">
 
             <div>
 
-                <h1>Valorant Champions 2026</h1>
+                <h1>Left 4 Dead 2 Championship 2026</h1>
 
                 <p>
-                    August 20 - August 25 • Single Elimination • 16 Teams
+                    August 20 - August 25 • Elimination • 16 Teams
                 </p>
 
             </div>
@@ -113,7 +173,7 @@
 
         <!-- HERO -->
 
-        <section class="tournament-banner">
+        <section class="tournament-banner tournament-box">
 
             <div class="banner-overlay">
 

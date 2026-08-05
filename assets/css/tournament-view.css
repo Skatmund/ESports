@@ -43,8 +43,8 @@
     margin-bottom:30px;
 
     background:
-        linear-gradient(rgba(2,6,23,.55),rgba(2,6,23,.8)),
-        url("../images/valorant-banner.jpg") center/cover;
+        linear-gradient(rgba(0, 0, 0, 0.55),rgba(2,6,23,.8)),
+        url("../images/L4D2.jpg") center/cover;
 
     display:flex;
     align-items:flex-end;
