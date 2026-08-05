@@ -126,8 +126,12 @@
 .form-actions{
 
     display:flex;
-    justify-content:flex-end;
-    gap:15px;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:10px;
 
 }
 
@@ -220,16 +224,14 @@
 .danger-btn{
 
     display:flex;
+
     align-items:center;
+
     gap:10px;
 
-    background:#dc2626;
-
-    color:white;
+    padding:14px 24px;
 
     border:none;
-
-    padding:14px 22px;
 
     border-radius:12px;
 
@@ -238,6 +240,18 @@
     font-weight:600;
 
     transition:.3s;
+
+    background:#dc2626;
+
+    color:white;
+
+}
+
+.right-actions{
+
+    display:flex;
+
+    gap:15px;
 
 }
 
@@ -280,6 +294,10 @@
     .form-actions{
 
         flex-direction:column;
+                
+        gap:20px;
+
+        align-items:stretch;
 
     }
 
@@ -295,6 +313,14 @@
 
         width:100%;
         justify-content:center;
+
+    }
+
+    .right-actions{
+
+        flex-direction:column;
+
+        width:100%;
 
     }
 
