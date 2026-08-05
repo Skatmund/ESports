@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>View Game | ArenaHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/dashboard-design.css">
+    <link rel="stylesheet" href="../assets/css/game-view.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+            <div class="logo">
+
+                <div class="logo-icon">🎮</div>
+
+                <h2>ArenaHub</h2>
+
+            </div>
+            <ul class="sidebar-menu">
+
+                <li>
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </li>
+
+                <li>
+                    <i data-lucide="trophy"></i>
+                    <span>Tournaments</span>
+                </li>
+
+                <li>
+                    <i data-lucide="users"></i>
+                    <span>Teams</span>
+                </li>
+
+                <li>
+                    <i data-lucide="user-round"></i>
+                    <span>Players</span>
+                </li>
+
+                <li class="active">
+                    <i data-lucide="gamepad-2"></i>
+                    <span>Games</span>
+                </li>
+
+                <li>
+                    <i data-lucide="calendar-days"></i>
+                    <span>Schedule</span>
+                </li>
+
+                <li>
+                    <i data-lucide="git-branch"></i>
+                    <span>Brackets</span>
+                </li>
+
+                <li>
+                    <i data-lucide="bar-chart-3"></i>
+                    <span>Analytics</span>
+                </li>
+            </ul>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <!-- PAGE HEADER -->
+
+        <header class="page-header">
+
+            <div class="game-header">
+
+                <img src="../assets/images/valorant-banner.jpg"
+                     class="game-banner"
+                     alt="Game Banner">
+
+                <div>
+
+                    <h1>Valorant</h1>
+
+                    <p>5v5 Tactical FPS • Riot Games</p>
+
+                    <span class="status active">
+                        ● Active Game
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="header-actions">
+
+                <button class="secondary-btn">
+
+                    <i data-lucide="square-pen"></i>
+
+                    Edit Game
+
+                </button>
+
+                <button class="danger-btn">
+
+                    <i data-lucide="trash-2"></i>
+
+                    Delete Game
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- STATS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <i data-lucide="trophy"></i>
+
+                <h2>12</h2>
+
+                <p>Active Tournaments</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i data-lucide="users"></i>
+
+                <h2>248</h2>
+
+                <p>Registered Teams</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i data-lucide="user-round"></i>
+
+                <h2>1,230</h2>
+
+                <p>Players</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i data-lucide="monitor-play"></i>
+
+                <h2>18</h2>
+
+                <p>Live Matches</p>
+
+            </div>
+
+        </section>
+
+        <!-- CONTENT -->
+
+        <section class="content-grid">
+
+            <!-- LEFT -->
+
+            <div class="left-column">
+
+                <div class="card">
+
+                    <h3>Game Information</h3>
+
+                    <div class="info-grid">
+
+                        <div>
+                            <span>Developer</span>
+                            <strong>Riot Games</strong>
+                        </div>
+
+                        <div>
+                            <span>Genre</span>
+                            <strong>Tactical FPS</strong>
+                        </div>
+
+                        <div>
+                            <span>Platform</span>
+                            <strong>PC</strong>
+                        </div>
+
+                        <div>
+                            <span>Release Year</span>
+                            <strong>2020</strong>
+                        </div>
+
+                        <div>
+                            <span>Maximum Team Size</span>
+                            <strong>5 Players</strong>
+                        </div>
+
+                        <div>
+                            <span>Default Format</span>
+                            <strong>Best of 3</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Description</h3>
+
+                    <p class="description">
+
+                        Valorant is a competitive 5v5 tactical shooter where
+                        precise gunplay meets unique agent abilities. Teams
+                        compete in organized tournaments with strategic gameplay
+                        and objective-based matches.
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Recent Tournaments</h3>
+
+                    <table class="tournament-table">
+
+                        <tr>
+
+                            <th>Tournament</th>
+                            <th>Date</th>
+                            <th>Status</th>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Summer Championship</td>
+                            <td>July 15, 2026</td>
+                            <td class="active-text">Completed</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Campus League</td>
+                            <td>August 2, 2026</td>
+                            <td class="live-text">Live</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Arena Cup</td>
+                            <td>August 20, 2026</td>
+                            <td>Upcoming</td>
+
+                        </tr>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="right-column">
+
+                <div class="card">
+
+                    <h3>Supported Tournament Formats</h3>
+
+                    <ul class="format-list">
+
+                        <li>✔ Single Elimination</li>
+                        <li>✔ Double Elimination</li>
+                        <li>✔ Round Robin</li>
+                        <li>✔ Best of 1</li>
+                        <li>✔ Best of 3</li>
+                        <li>✔ Best of 5</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Quick Actions</h3>
+
+                    <div class="quick-actions">
+
+                        <button>
+
+                            <i data-lucide="plus-circle"></i>
+
+                            Create Tournament
+
+                        </button>
+
+                        <button>
+
+                            <i data-lucide="square-pen"></i>
+
+                            Edit Game
+
+                        </button>
+
+                        <button>
+
+                            <i data-lucide="image-plus"></i>
+
+                            Change Banner
+
+                        </button>
+
+                        <button>
+
+                            <i data-lucide="trash-2"></i>
+
+                            Delete Game
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script>
+
+lucide.createIcons();
+
+</script>
+
+</body>
+
+</html>
