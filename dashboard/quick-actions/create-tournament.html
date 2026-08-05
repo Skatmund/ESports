@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Tournament | ArenaHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="../../assets/css/dashboard-design.css">
+
+    <link rel="stylesheet"
+          href="../../assets/css/create-tournament.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+
+            <div class="logo">
+
+                <div class="logo-icon">🎮</div>
+
+                <h2>ArenaHub</h2>
+
+            </div>
+
+            <ul class="sidebar-menu">
+
+                <li>
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </li>
+
+                <li class="active">
+                    <i data-lucide="trophy"></i>
+                    <span>Tournaments</span>
+                </li>
+
+                <li>
+                    <i data-lucide="users"></i>
+                    <span>Teams</span>
+                </li>
+
+                <li>
+                    <i data-lucide="user-round"></i>
+                    <span>Players</span>
+                </li>
+
+                <li>
+                    <i data-lucide="gamepad-2"></i>
+                    <span>Games</span>
+                </li>
+
+                <li>
+                    <i data-lucide="calendar-days"></i>
+                    <span>Schedule</span>
+                </li>
+
+                <li>
+                    <i data-lucide="git-branch"></i>
+                    <span>Brackets</span>
+                </li>
+
+                <li>
+                    <i data-lucide="bar-chart-3"></i>
+                    <span>Analytics</span>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <header class="page-header">
+
+            <div>
+
+                <h1>Create Tournament</h1>
+
+                <p>
+                    Fill in the information below to create a new esports tournament.
+                </p>
+
+            </div>
+
+        </header>
+
+        <form class="tournament-form">
+
+            <!-- BASIC INFORMATION -->
+
+            <div class="form-card">
+
+                <h2>Basic Information</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>Tournament Name</label>
+
+                        <input type="text"
+                               placeholder="Valorant Champions League">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Game</label>
+
+                        <select>
+
+                            <option>Valorant</option>
+                            <option>CS2</option>
+                            <option>League of Legends</option>
+                            <option>Dota 2</option>
+                            <option>Mobile Legends</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Description</label>
+
+                    <textarea rows="5"
+                              placeholder="Describe the tournament..."></textarea>
+
+                </div>
+
+            </div>
+
+            <!-- DATE -->
+
+            <div class="form-card">
+
+                <h2>Schedule</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>Registration Deadline</label>
+
+                        <input type="date">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Tournament Start</label>
+
+                        <input type="date">
+
+                    </div>
+
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>Start Time</label>
+
+                        <input type="time">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Venue / Platform</label>
+
+                        <input type="text"
+                               placeholder="Online / LAN Venue">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- SETTINGS -->
+
+            <div class="form-card">
+
+                <h2>Tournament Settings</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>Maximum Teams</label>
+
+                        <input type="number"
+                               value="16">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Prize Pool</label>
+
+                        <input type="text"
+                               placeholder="$5,000">
+
+                    </div>
+
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>Bracket Type</label>
+
+                        <select>
+
+                            <option>Single Elimination</option>
+                            <option>Double Elimination</option>
+                            <option>Round Robin</option>
+                            <option>Swiss</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Visibility</label>
+
+                        <select>
+
+                            <option>Public</option>
+                            <option>Private</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- IMAGE -->
+
+            <div class="form-card">
+
+                <h2>Tournament Banner</h2>
+
+                <div class="upload-box">
+
+                    <i data-lucide="image-plus"></i>
+
+                    <p>Click or drag an image here to upload</p>
+
+                    <input type="file">
+
+                </div>
+
+            </div>
+
+            <!-- BUTTONS -->
+
+            <div class="form-buttons">
+
+                <button type="button"
+                        class="cancel-btn">
+
+                    Cancel
+
+                </button>
+
+                <button type="submit"
+                        class="create-btn">
+
+                    <i data-lucide="plus-circle"></i>
+
+                    Create Tournament
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+</div>
+
+<script>
+
+lucide.createIcons();
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Generate Bracket | ArenaHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/dashboard-design.css">
+    <link rel="stylesheet" href="../../assets/css/generate-bracket.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+            <div class="logo">
+
+                <div class="logo-icon">🎮</div>
+
+                <h2>ArenaHub</h2>
+
+            </div>
+            <ul class="sidebar-menu">
+
+                <li class="active">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </li>
+
+                <li>
+                    <i data-lucide="trophy"></i>
+                    <span>Tournaments</span>
+                </li>
+
+                <li>
+                    <i data-lucide="users"></i>
+                    <span>Teams</span>
+                </li>
+
+                <li>
+                    <i data-lucide="user-round"></i>
+                    <span>Players</span>
+                </li>
+
+                <li>
+                    <i data-lucide="gamepad-2"></i>
+                    <span>Games</span>
+                </li>
+
+                <li>
+                    <i data-lucide="calendar-days"></i>
+                    <span>Schedule</span>
+                </li>
+
+                <li>
+                    <i data-lucide="git-branch"></i>
+                    <span>Brackets</span>
+                </li>
+
+                <li>
+                    <i data-lucide="bar-chart-3"></i>
+                    <span>Analytics</span>
+                </li>
+            </ul>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="page-header">
+
+            <h1>Generate Tournament Bracket</h1>
+
+            <p>Create a bracket for your tournament in just a few clicks.</p>
+
+        </header>
+
+        <form class="bracket-form">
+
+            <!-- Tournament -->
+
+            <div class="form-card">
+
+                <h2>Tournament Information</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Tournament</label>
+
+                        <select>
+                            <option>Valorant Champions 2026</option>
+                            <option>CS2 Masters</option>
+                            <option>Dota 2 Summer Cup</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>Game</label>
+
+                        <select>
+                            <option>Valorant</option>
+                            <option>Counter-Strike 2</option>
+                            <option>Dota 2</option>
+                            <option>League of Legends</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Bracket Settings -->
+
+            <div class="form-card">
+
+                <h2>Bracket Settings</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>Bracket Type</label>
+
+                        <select>
+                            <option>Single Elimination</option>
+                            <option>Double Elimination</option>
+                            <option>Round Robin</option>
+                            <option>Swiss</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Number of Teams</label>
+
+                        <select>
+                            <option>4 Teams</option>
+                            <option>8 Teams</option>
+                            <option>16 Teams</option>
+                            <option>32 Teams</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Seeding Method</label>
+
+                        <select>
+                            <option>Random</option>
+                            <option>Ranking Based</option>
+                            <option>Manual</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Match Format</label>
+
+                        <select>
+                            <option>Best of 1</option>
+                            <option>Best of 3</option>
+                            <option>Best of 5</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Teams -->
+
+            <div class="form-card">
+
+                <h2>Participating Teams</h2>
+
+                <div class="team-list">
+
+                    <label><input type="checkbox" checked> Team Eclipse</label>
+                    <label><input type="checkbox" checked> Team Nova</label>
+                    <label><input type="checkbox" checked> Team Alpha</label>
+                    <label><input type="checkbox" checked> Team Omega</label>
+                    <label><input type="checkbox"> Team Legacy</label>
+                    <label><input type="checkbox"> Team Phoenix</label>
+                    <label><input type="checkbox"> Team Inferno</label>
+                    <label><input type="checkbox"> Team Titans</label>
+
+                </div>
+
+            </div>
+
+            <!-- Preview -->
+
+            <div class="form-card">
+
+                <h2>Bracket Preview</h2>
+
+                <div class="bracket-preview">
+
+                    <div class="match-box">
+
+                        <span>Team Eclipse</span>
+
+                        <span>VS</span>
+
+                        <span>Team Nova</span>
+
+                    </div>
+
+                    <div class="match-box">
+
+                        <span>Team Alpha</span>
+
+                        <span>VS</span>
+
+                        <span>Team Omega</span>
+
+                    </div>
+
+                    <div class="match-box empty">
+
+                        Quarterfinal Winners
+
+                    </div>
+
+                    <div class="match-box empty">
+
+                        Championship Match
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Buttons -->
+
+            <div class="form-buttons">
+
+                <button type="button" class="cancel-btn">
+
+                    Cancel
+
+                </button>
+
+                <button type="submit" class="generate-btn">
+
+                    <i data-lucide="git-branch-plus"></i>
+
+                    Generate Bracket
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+</div>
+
+<script>
+
+lucide.createIcons();
+
+</script>
+
+</body>
+
+</html>
