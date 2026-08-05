@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ArenaHub | Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/dashboard-design.css">
+    <link rel="stylesheet" href="../assets/css/brackets-design.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+            <div class="logo">
+
+                <div class="logo-icon">🎮</div>
+
+                <h2>ArenaHub</h2>
+
+            </div>
+            <ul class="sidebar-menu">
+
+                <li>
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </li>
+
+                <li>
+                    <i data-lucide="trophy"></i>
+                    <span>Tournaments</span>
+                </li>
+
+                <li>
+                    <i data-lucide="users"></i>
+                    <span>Teams</span>
+                </li>
+
+                <li>
+                    <i data-lucide="user-round"></i>
+                    <span>Players</span>
+                </li>
+
+                <li>
+                    <i data-lucide="gamepad-2"></i>
+                    <span>Games</span>
+                </li>
+
+                <li>
+                    <i data-lucide="calendar-days"></i>
+                    <span>Schedule</span>
+                </li>
+
+                <li class="active">
+                    <i data-lucide="git-branch"></i>
+                    <span>Brackets</span>
+                </li>
+
+                <li>
+                    <i data-lucide="bar-chart-3"></i>
+                    <span>Analytics</span>
+                </li>
+            </ul>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+        
+        <!-- HEADER -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Tournament Brackets</h1>
+
+                <p>Generate, manage, and monitor brackets.</p>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="search-box">
+
+                    <i data-lucide="search"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Search tournaments...">
+
+                </div>
+
+                <button class="icon-btn">
+                    <i data-lucide="bell"></i>
+                </button>
+
+                <button class="icon-btn">
+                    <i data-lucide="message-circle"></i>
+                </button>
+
+                <div class="profile-menu">
+
+                    <img
+                        src="https://i.pravatar.cc/100"
+                        class="profile-img"
+                        id="profileBtn"
+                        alt="Profile">
+
+                    <div class="dropdown-menu" id="dropdownMenu">
+
+                        <a href="settings.html">
+                            <i data-lucide="settings"></i>
+                            Settings
+                        </a>
+
+                        <a href="../login.html" class="logout-link">
+                            <i data-lucide="log-out"></i>
+                            Logout
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- FILTERS -->
+
+        <section class="filters">
+
+            <div class="filter-left">
+
+                <input
+                    type="text"
+                    placeholder="Search tournament...">
+
+                <select>
+
+                    <option>All Games</option>
+                    <option>Valorant</option>
+                    <option>CS2</option>
+                    <option>Dota 2</option>
+                    <option>League of Legends</option>
+
+                </select>
+
+                <select>
+
+                    <option>Single Elimination</option>
+                    <option>Double Elimination</option>
+                    <option>Round Robin</option>
+
+                </select>
+
+            </div>
+
+            <button class="create-btn">
+
+                + Generate Bracket
+
+            </button>
+
+        </section>
+
+        <!-- BRACKET -->
+
+        <section class="bracket-container">
+
+            <div class="round">
+
+                <h3>Round 1</h3>
+
+                <div class="match">
+
+                    <div class="team winner">Team Alpha</div>
+
+                    <div class="team">Team Nova</div>
+
+                </div>
+
+                <div class="match">
+
+                    <div class="team winner">Team Eclipse</div>
+
+                    <div class="team">Team Omega</div>
+
+                </div>
+
+                <div class="match">
+
+                    <div class="team winner">Team Legacy</div>
+
+                    <div class="team">Team Phoenix</div>
+
+                </div>
+
+                <div class="match">
+
+                    <div class="team winner">Team Titan</div>
+
+                    <div class="team">Team Apex</div>
+
+                </div>
+
+            </div>
+
+            <div class="round finals">
+
+                <h3>Semi Finals</h3>
+
+                <div class="match">
+
+                    <div class="team winner">
+
+                        Team Alpha
+
+                    </div>
+
+                    <div class="team">
+
+                        Team Eclipse
+
+                    </div>
+
+                </div>
+
+                <div class="match">
+
+                    <div class="team">
+
+                        Team Legacy
+
+                    </div>
+
+                    <div class="team winner">
+
+                        Team Titan
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="round finals">
+
+                <h3>Final</h3>
+
+                <div class="championship">
+
+                    <div class="team winner">
+
+                        Team Alpha
+
+                    </div>
+
+                    <div class="team">
+
+                        Team Titan
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SIDE PANELS -->
+
+        <section class="content-grid">
+
+            <div class="card">
+
+                <h3>Tournament Information</h3>
+
+                <p><strong>Name:</strong> Valorant Champions League 2026</p>
+
+                <p><strong>Teams:</strong> 8</p>
+
+                <p><strong>Format:</strong> Single Elimination</p>
+
+                <p><strong>Status:</strong> Live</p>
+
+                <p><strong>Champion:</strong> —</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Quick Actions</h3>
+
+                <div class="quick-actions">
+
+                    <button>Generate</button>
+
+                    <button>Shuffle Teams</button>
+
+                    <button>Export PDF</button>
+
+                    <button>Share Bracket</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script>lucide.createIcons();</script>
+<script src="../assets/js/dashboard.js"></script>
+<script>lucide.createIcons();</script>
+
+</body>
+
+</html>
