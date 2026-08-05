@@ -64,7 +64,7 @@
 
     outline:none;
 
-    min-width:180px;
+    min-width:150px;
 
     transition:.3s;
 
@@ -337,4 +337,9 @@
 
     }
 
+}
+
+.search-box {
+
+    min-width: 10px;
 }
