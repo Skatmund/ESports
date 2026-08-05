@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ArenaHub | Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/dashboard-design.css">
+    <link rel="stylesheet" href="../assets/css/schedule-design.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+            <div class="logo">
+
+                <div class="logo-icon">🎮</div>
+
+                <h2>ArenaHub</h2>
+
+            </div>
+            <ul class="sidebar-menu">
+
+                <li>
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </li>
+
+                <li>
+                    <i data-lucide="trophy"></i>
+                    <span>Tournaments</span>
+                </li>
+
+                <li>
+                    <i data-lucide="users"></i>
+                    <span>Teams</span>
+                </li>
+
+                <li>
+                    <i data-lucide="user-round"></i>
+                    <span>Players</span>
+                </li>
+
+                <li>
+                    <i data-lucide="gamepad-2"></i>
+                    <span>Games</span>
+                </li>
+
+                <li class="active">
+                    <i data-lucide="calendar-days"></i>
+                    <span>Schedule</span>
+                </li>
+
+                <li>
+                    <i data-lucide="git-branch"></i>
+                    <span>Brackets</span>
+                </li>
+
+                <li>
+                    <i data-lucide="bar-chart-3"></i>
+                    <span>Analytics</span>
+                </li>
+            </ul>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- HEADER -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Schedule Management</h1>
+
+                <p>Manage upcoming tournaments, live games, and tournament schedules.</p>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="search-box">
+
+                    <i data-lucide="search"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Search tournaments...">
+
+                </div>
+
+                <button class="icon-btn">
+                    <i data-lucide="bell"></i>
+                </button>
+
+                <button class="icon-btn">
+                    <i data-lucide="message-circle"></i>
+                </button>
+
+                <div class="profile-menu">
+
+                    <img
+                        src="https://i.pravatar.cc/100"
+                        class="profile-img"
+                        id="profileBtn"
+                        alt="Profile">
+
+                    <div class="dropdown-menu" id="dropdownMenu">
+
+                        <a href="settings.html">
+                            <i data-lucide="settings"></i>
+                            Settings
+                        </a>
+
+                        <a href="../login.html" class="logout-link">
+                            <i data-lucide="log-out"></i>
+                            Logout
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- STATISTICS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <i data-lucide="calendar-days"></i>
+
+                <h2>18</h2>
+
+                <p>Today's Matches</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i data-lucide="clock-3"></i>
+
+                <h2>42</h2>
+
+                <p>Upcoming Matches</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i data-lucide="play-circle"></i>
+
+                <h2>6</h2>
+
+                <p>Live Matches</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i data-lucide="check-circle"></i>
+
+                <h2>214</h2>
+
+                <p>Completed Matches</p>
+
+            </div>
+
+        </section>
+
+        <!-- FILTER BAR -->
+
+        <section class="filters">
+
+            <div class="filter-left">
+
+                <input
+                    type="text"
+                    placeholder="Search match...">
+
+                <select>
+
+                    <option>All Tournaments</option>
+                    <option>Valorant Champions League</option>
+                    <option>CS2 Pro Series</option>
+                    <option>Dota 2 Masters</option>
+
+                </select>
+
+                <select>
+
+                    <option>All Status</option>
+                    <option>Scheduled</option>
+                    <option>Live</option>
+                    <option>Completed</option>
+
+                </select>
+
+                <input type="date">
+
+            </div>
+
+            <button class="create-btn">
+
+                + Schedule Match
+
+            </button>
+
+        </section>
+
+        <!-- CONTENT GRID -->
+
+        <section class="schedule-grid">
+
+            <!-- LEFT COLUMN -->
+
+            <div class="schedule-left">
+
+                <!-- MATCH -->
+
+                <div class="match-card">
+
+                    <div class="match-header">
+
+                        <h3>Valorant Champions League</h3>
+
+                        <span class="status scheduled">
+                            Scheduled
+                        </span>
+
+                    </div>
+
+                    <div class="match-teams">
+
+                        <div class="team">
+
+                            <img src="../assets/images/team1.png">
+
+                            <h4>Team Eclipse</h4>
+
+                        </div>
+
+                        <div class="vs">
+
+                            VS
+
+                        </div>
+
+                        <div class="team">
+
+                            <img src="../assets/images/team2.png">
+
+                            <h4>Team Nova</h4>
+
+                        </div>
+
+                    </div>
+
+                    <div class="match-info">
+
+                        <span>
+
+                            <i data-lucide="calendar-days"></i>
+
+                            August 20, 2026
+
+                        </span>
+
+                        <span>
+
+                            <i data-lucide="clock-3"></i>
+
+                            8:00 PM
+
+                        </span>
+
+                        <span>
+
+                            <i data-lucide="map-pin"></i>
+
+                            Arena 1
+
+                        </span>
+
+                    </div>
+
+                    <div class="match-actions">
+
+                        <button class="view-btn">
+                            View
+                        </button>
+
+                        <button class="edit-btn">
+                            Edit
+                        </button>
+
+                        <button class="start-btn">
+                            Start Match
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- MATCH -->
+
+                <div class="match-card">
+
+                    <div class="match-header">
+
+                        <h3>Valorant Champions League</h3>
+
+                        <span class="status scheduled">
+                            Scheduled
+                        </span>
+
+                    </div>
+
+                    <div class="match-teams">
+
+                        <div class="team">
+
+                            <img src="../assets/images/team1.png">
+
+                            <h4>Team Eclipse</h4>
+
+                        </div>
+
+                        <div class="vs">
+
+                            VS
+
+                        </div>
+
+                        <div class="team">
+
+                            <img src="../assets/images/team2.png">
+
+                            <h4>Team Nova</h4>
+
+                        </div>
+
+                    </div>
+
+                    <div class="match-info">
+
+                        <span>
+
+                            <i data-lucide="calendar-days"></i>
+
+                            August 20, 2026
+
+                        </span>
+
+                        <span>
+
+                            <i data-lucide="clock-3"></i>
+
+                            8:00 PM
+
+                        </span>
+
+                        <span>
+
+                            <i data-lucide="map-pin"></i>
+
+                            Arena 1
+
+                        </span>
+
+                    </div>
+
+                    <div class="match-actions">
+
+                        <button class="view-btn">
+                            View
+                        </button>
+
+                        <button class="edit-btn">
+                            Edit
+                        </button>
+
+                        <button class="start-btn">
+                            Start Match
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN -->
+
+            <div class="schedule-right">
+
+                <div class="card">
+
+                    <h3>Today's Schedule</h3>
+
+                    <ul class="today-list">
+
+                        <li>
+
+                            <strong>8:00 PM</strong>
+
+                            <span>Team Eclipse vs Team Nova</span>
+
+                        </li>
+
+                        <li>
+
+                            <strong>10:00 PM</strong>
+
+                            <span>Team Alpha vs Team Legacy</span>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Upcoming Events</h3>
+
+                    <ul class="event-list">
+
+                        <li>🏆 Valorant Finals</li>
+
+                        <li>🎮 CS2 Quarter Finals</li>
+
+                        <li>🔥 Dota 2 Group Stage</li>
+
+                        <li>👥 Team Registration Deadline</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script>lucide.createIcons();</script>
+<script src="../assets/js/dashboard.js"></script>
+<script>lucide.createIcons();</script>
+
+</body>
+
+</html>
