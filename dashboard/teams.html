@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ArenaHub | Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/dashboard-design.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+            <div class="logo">
+
+                <div class="logo-icon">🎮</div>
+
+                <h2>ArenaHub</h2>
+
+            </div>
+            <ul class="sidebar-menu">
+
+                <li>
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </li>
+
+                <li>
+                    <i data-lucide="trophy"></i>
+                    <span>Tournaments</span>
+                </li>
+
+                <li class="active">
+                    <i data-lucide="users"></i>
+                    <span>Teams</span>
+                </li>
+
+                <li>
+                    <i data-lucide="user-round"></i>
+                    <span>Players</span>
+                </li>
+
+                <li>
+                    <i data-lucide="gamepad-2"></i>
+                    <span>Games</span>
+                </li>
+
+                <li>
+                    <i data-lucide="calendar-days"></i>
+                    <span>Schedule</span>
+                </li>
+
+                <li>
+                    <i data-lucide="git-branch"></i>
+                    <span>Brackets</span>
+                </li>
+
+                <li>
+                    <i data-lucide="bar-chart-3"></i>
+                    <span>Analytics</span>
+                </li>
+            </ul>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- PAGE HEADER -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Team Management 👥</h1>
+
+                <p>Manage your esports teams, captains, and player rosters.</p>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="search-box">
+
+                    <i data-lucide="search"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Search tournaments...">
+
+                </div>
+
+                <button class="icon-btn">
+                    <i data-lucide="bell"></i>
+                </button>
+
+                <button class="icon-btn">
+                    <i data-lucide="message-circle"></i>
+                </button>
+
+                <div class="profile-menu">
+
+                    <img
+                        src="https://i.pravatar.cc/100"
+                        class="profile-img"
+                        id="profileBtn"
+                        alt="Profile">
+
+                    <div class="dropdown-menu" id="dropdownMenu">
+
+                        <a href="settings.html">
+                            <i data-lucide="settings"></i>
+                            Settings
+                        </a>
+
+                        <a href="../login.html" class="logout-link">
+                            <i data-lucide="log-out"></i>
+                            Logout
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- STATISTICS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <i data-lucide="shield"></i>
+
+                <h2>8</h2>
+
+                <p>Total Teams</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i data-lucide="users"></i>
+
+                <h2>96</h2>
+
+                <p>Registered Players</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i data-lucide="user-check"></i>
+
+                <h2>8</h2>
+
+                <p>Team Captains</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i data-lucide="user-round-cog"></i>
+
+                <h2>2</h2>
+
+                <p>Coaches</p>
+
+            </div>
+
+        </section>
+
+        <!-- FILTERS -->
+
+        <section class="card">
+
+            <div class="filter-bar">
+
+                <input
+                    type="text"
+                    placeholder="Search team...">
+
+                <select>
+
+                    <option>All Games</option>
+                    <option>Valorant</option>
+                    <option>League of Legends</option>
+                    <option>DOTA 2</option>
+                    <option>Counter-Strike 2</option>
+
+                </select>
+
+                <select>
+
+                    <option>All Status</option>
+                    <option>Active</option>
+                    <option>Recruiting</option>
+                    <option>Inactive</option>
+
+                </select>
+
+                <button class="create-btn">
+
+                    <i data-lucide="plus"></i>
+
+                    Create Team
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- TEAM TABLE -->
+
+        <section class="card">
+
+            <h3>Registered Teams</h3>
+
+            <table class="tournament-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Team</th>
+
+                        <th>Game</th>
+
+                        <th>Captain</th>
+
+                        <th>Players</th>
+
+                        <th>Status</th>
+
+                        <th>Actions</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Team Eclipse</td>
+
+                        <td>Valorant</td>
+
+                        <td>John Cruz</td>
+
+                        <td>5</td>
+
+                        <td>
+
+                            <span class="status open">
+
+                                Active
+
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button class="table-btn view">
+                                <i data-lucide="eye"></i>
+                            </button>
+
+                            <button class="table-btn edit">
+                                <i data-lucide="square-pen"></i>
+                            </button>
+
+                            <button class="table-btn delete">
+                                <i data-lucide="trash-2"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Team Nova</td>
+
+                        <td>Counter-Strike 2</td>
+
+                        <td>Michael Tan</td>
+
+                        <td>5</td>
+
+                        <td>
+
+                            <span class="status open">
+
+                                Active
+
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button class="table-btn view">
+                                <i data-lucide="eye"></i>
+                            </button>
+
+                            <button class="table-btn edit">
+                                <i data-lucide="square-pen"></i>
+                            </button>
+
+                            <button class="table-btn delete">
+                                <i data-lucide="trash-2"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Team Alpha</td>
+
+                        <td>DOTA 2</td>
+
+                        <td>David Reyes</td>
+
+                        <td>5</td>
+
+                        <td>
+
+                            <span class="status ongoing">
+
+                                Recruiting
+
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button class="table-btn view">
+                                <i data-lucide="eye"></i>
+                            </button>
+
+                            <button class="table-btn edit">
+                                <i data-lucide="square-pen"></i>
+                            </button>
+
+                            <button class="table-btn delete">
+                                <i data-lucide="trash-2"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Team Legacy</td>
+
+                        <td>League of Legends</td>
+
+                        <td>Sarah Lim</td>
+
+                        <td>5</td>
+
+                        <td>
+
+                            <span class="status completed">
+
+                                Inactive
+
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button class="table-btn view">
+                                <i data-lucide="eye"></i>
+                            </button>
+
+                            <button class="table-btn edit">
+                                <i data-lucide="square-pen"></i>
+                            </button>
+
+                            <button class="table-btn delete">
+                                <i data-lucide="trash-2"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script>lucide.createIcons();</script>
+<script src="../assets/js/dashboard.js"></script>
+<script>lucide.createIcons();</script>
+
+</body>
+
+</html>
