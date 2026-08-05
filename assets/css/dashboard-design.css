@@ -191,6 +191,12 @@ body{
 
 }
 
+.sidebar-menu li.active:hover {
+
+    transform: none;
+
+}
+
 /* ========================================
    SIDEBAR FOOTER
 ======================================== */
