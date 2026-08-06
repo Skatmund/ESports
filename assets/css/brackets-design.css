@@ -218,6 +218,12 @@
     gap:25px;
 }
 
+.quick {
+
+    height: 60%;
+
+}
+
 .card{
 
     background:#111827;
@@ -227,6 +233,7 @@
     border-radius:18px;
 
     padding:25px;
+
 }
 
 .card h3{
