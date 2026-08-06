@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Profile | ArenaHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/dashboard-design.css">
+    <link rel="stylesheet" href="../assets/css/settings.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+            <div class="logo">
+
+                <div class="logo-icon">🎮</div>
+
+                <h2>ArenaHub</h2>
+
+            </div>
+            <ul class="sidebar-menu">
+
+                <li class="active">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </li>
+
+                <li>
+                    <i data-lucide="trophy"></i>
+                    <span>Tournaments</span>
+                </li>
+
+                <li>
+                    <i data-lucide="users"></i>
+                    <span>Teams</span>
+                </li>
+
+                <li>
+                    <i data-lucide="user-round"></i>
+                    <span>Players</span>
+                </li>
+
+                <li>
+                    <i data-lucide="gamepad-2"></i>
+                    <span>Games</span>
+                </li>
+
+                <li>
+                    <i data-lucide="calendar-days"></i>
+                    <span>Schedule</span>
+                </li>
+
+                <li>
+                    <i data-lucide="git-branch"></i>
+                    <span>Brackets</span>
+                </li>
+
+                <li>
+                    <i data-lucide="bar-chart-3"></i>
+                    <span>Analytics</span>
+                </li>
+            </ul>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <!-- PAGE HEADER -->
+
+        <header class="page-header">
+
+            <div>
+
+                <h1>Edit Profile</h1>
+
+                <p>Update your account information and personal preferences.</p>
+
+            </div>
+
+        </header>
+
+        <form class="profile-form">
+
+            <!-- PROFILE PHOTO -->
+
+            <div class="form-card">
+
+                <h2>Profile Picture</h2>
+
+                <div class="profile-picture-section">
+
+                    <img src="https://i.pravatar.cc/200"
+                         alt="Profile Picture"
+                         class="profile-preview">
+
+                    <div class="picture-info">
+
+                        <h3>John Doe</h3>
+
+                        <p>Tournament Manager</p>
+
+                        <label class="upload-btn">
+
+                            <i data-lucide="upload"></i>
+
+                            Change Photo
+
+                            <input type="file" hidden>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PERSONAL INFORMATION -->
+
+            <div class="form-card">
+
+                <h2>Personal Information</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>First Name</label>
+
+                        <input type="text"
+                               value="John">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Last Name</label>
+
+                        <input type="text"
+                               value="Doe">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Email Address</label>
+
+                        <input type="email"
+                               value="john@example.com">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Phone Number</label>
+
+                        <input type="text"
+                               value="+63 912 345 6789">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ACCOUNT -->
+
+            <div class="form-card">
+
+                <h2>Account Information</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>Username</label>
+
+                        <input type="text"
+                               value="john_doe">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Role</label>
+
+                        <input type="text"
+                               value="Tournament Manager"
+                               readonly>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PASSWORD -->
+
+            <div class="form-card">
+
+                <h2>Change Password</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>Current Password</label>
+
+                        <input type="password">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>New Password</label>
+
+                        <input type="password">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Confirm Password</label>
+
+                        <input type="password">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- BIO -->
+
+            <div class="form-card">
+
+                <h2>Bio</h2>
+
+                <textarea rows="6"
+                          placeholder="Tell us something about yourself...">Tournament organizer passionate about competitive esports and community events.</textarea>
+
+            </div>
+
+            <!-- ACTIONS -->
+
+            <div class="form-actions">
+
+                <button type="button"
+                        class="secondary-btn">
+
+                    Cancel
+
+                </button>
+
+                <button type="submit"
+                        class="primary-btn">
+
+                    <i data-lucide="save"></i>
+
+                    Save Changes
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+</div>
+
+<script>
+
+lucide.createIcons();
+
+</script>
+
+</body>
+
+</html>

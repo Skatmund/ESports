@@ -1,0 +1,325 @@
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.page-header{
+    margin-bottom:30px;
+}
+
+.page-header h1{
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.page-header p{
+    color:#94a3b8;
+    font-size:15px;
+}
+
+
+/* ==========================================
+   PROFILE FORM
+========================================== */
+
+.profile-form{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+
+/* ==========================================
+   FORM CARD
+========================================== */
+
+.form-card{
+    background:#111827;
+    border:1px solid #1e293b;
+    border-radius:18px;
+    padding:30px;
+    transition:.3s;
+}
+
+.form-card:hover{
+    border-color:#334155;
+}
+
+.form-card h2{
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+
+/* ==========================================
+   PROFILE PICTURE
+========================================== */
+
+.profile-picture-section{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.profile-preview{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #2563eb;
+}
+
+.picture-info h3{
+    font-size:24px;
+    margin-bottom:8px;
+}
+
+.picture-info p{
+    color:#94a3b8;
+    margin-bottom:20px;
+}
+
+
+/* ==========================================
+   UPLOAD BUTTON
+========================================== */
+
+.upload-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:12px 22px;
+
+    background:#2563eb;
+    color:#fff;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.upload-btn:hover{
+    background:#1d4ed8;
+}
+
+.upload-btn svg{
+    width:18px;
+    height:18px;
+}
+
+
+/* ==========================================
+   FORM GRID
+========================================== */
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+
+/* ==========================================
+   FORM GROUP
+========================================== */
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    margin-bottom:10px;
+    color:#cbd5e1;
+    font-size:14px;
+    font-weight:600;
+}
+
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+.form-group input{
+    width:100%;
+
+    padding:14px 16px;
+
+    background:#0f172a;
+    color:#fff;
+
+    border:1px solid #334155;
+    border-radius:12px;
+
+    font-size:14px;
+
+    transition:.3s;
+}
+
+.form-group input:focus{
+    outline:none;
+    border-color:#2563eb;
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+}
+
+.form-group input:hover{
+    border-color:#475569;
+}
+
+.form-group input[readonly]{
+    background:#1e293b;
+    color:#94a3b8;
+    cursor:not-allowed;
+}
+
+
+/* ==========================================
+   TEXTAREA
+========================================== */
+
+textarea{
+    width:100%;
+    min-height:150px;
+
+    padding:16px;
+
+    background:#0f172a;
+    color:#fff;
+
+    border:1px solid #334155;
+    border-radius:12px;
+
+    resize:vertical;
+
+    font-family:"Inter",sans-serif;
+    font-size:14px;
+    line-height:1.6;
+
+    transition:.3s;
+}
+
+textarea:focus{
+    outline:none;
+    border-color:#2563eb;
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+}
+
+textarea:hover{
+    border-color:#475569;
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.primary-btn,
+.secondary-btn{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    padding:14px 28px;
+
+    border:none;
+    border-radius:12px;
+
+    font-family:"Inter",sans-serif;
+    font-size:14px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.primary-btn{
+    background:#2563eb;
+    color:#fff;
+}
+
+.primary-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+.secondary-btn{
+    background:#1e293b;
+    color:#cbd5e1;
+    border:1px solid #334155;
+}
+
+.secondary-btn:hover{
+    background:#334155;
+    color:#fff;
+}
+
+
+/* ==========================================
+   ACTIONS
+========================================== */
+
+.form-actions{
+    display:flex;
+    justify-content:flex-end;
+    gap:15px;
+}
+
+
+/* ==========================================
+   PLACEHOLDER
+========================================== */
+
+::placeholder{
+    color:#64748b;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+    .profile-picture-section{
+        flex-direction:column;
+        align-items:flex-start;
+        text-align:left;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .page-header h1{
+        font-size:28px;
+    }
+
+    .form-card{
+        padding:20px;
+    }
+
+    .profile-preview{
+        width:100px;
+        height:100px;
+    }
+
+    .form-actions{
+        flex-direction:column-reverse;
+    }
+
+    .primary-btn,
+    .secondary-btn{
+        width:100%;
+    }
+
+}
