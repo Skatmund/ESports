@@ -10,9 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/landing-design.css">
-    <link rel="stylesheet" href="assets/css/register-design.css">
-    <link rel="stylesheet" href="assets/css/login-design.css">
+    <link rel="stylesheet" href="../assets/css/landing-design.css">
+    <link rel="stylesheet" href="../assets/css/register-design.css">
+    <link rel="stylesheet" href="../assets/css/login-design.css">
 
 </head>
 
@@ -88,7 +88,21 @@
 
             </div>
 
-            <form class="auth-form">
+            <!-- INCORRECT CREDENTIALS -->
+
+            <?php
+            if (isset($_GET['error'])) {
+
+                if ($_GET['error'] == "invalid") {
+                    echo '<div class="error-message">
+                            Invalid username or password.
+                        </div>';
+                }
+
+            }
+            ?>
+
+            <form class="auth-form" action="login-process.php" method="POST">
 
                 <div class="input-group">
 
@@ -96,7 +110,9 @@
 
                     <input
                         type="text"
-                        placeholder="Enter your email or username">
+                        name="username"
+                        placeholder="Enter your email or username"
+                        required>
 
                 </div>
 
@@ -109,7 +125,9 @@
                         <input
                             type="password"
                             id="loginPassword"
-                            placeholder="Password">
+                            name="password"
+                            placeholder="Password"
+                            required>
 
                         <button
                             type="button"
@@ -128,7 +146,9 @@
 
                     <label class="remember-me">
 
-                        <input type="checkbox">
+                        <input
+                            type="checkbox"
+                            name="remember">
 
                         Remember Me
 
@@ -138,8 +158,12 @@
 
                 </div>
 
-                <button class="btn btn-primary auth-btn">
+                <button
+                    type="submit"
+                    class="btn btn-primary auth-btn">
+
                     Login
+
                 </button>
 
             </form>
@@ -148,7 +172,7 @@
 
                 <p>
                     Don't have an account?
-                    <a href="register.html">Create Account</a>
+                    <a href="../register/register.php">Create Account</a>
                 </p>
 
             </div>

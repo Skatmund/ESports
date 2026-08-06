@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/landing-design.css">
-    <link rel="stylesheet" href="assets/css/register-design.css">
+    <link rel="stylesheet" href="../assets/css/landing-design.css">
+    <link rel="stylesheet" href="../assets/css/register-design.css">
 </head>
 
 <body>
@@ -83,30 +83,30 @@
                 </p>
 
             </div>
-            <form class="auth-form">
+            <form class="auth-form" action="register-process.php" method="POST">
 
                 <div class="input-row">
 
                     <div class="input-group">
                         <label>First Name</label>
-                        <input type="text" placeholder="John">
+                        <input type="text" name="first_name" required>
                     </div>
 
                     <div class="input-group">
                         <label>Last Name</label>
-                        <input type="text" placeholder="Doe">
+                        <input type="text" name="last_name" required>
                     </div>
 
                 </div>
 
                 <div class="input-group">
                     <label>Email Address</label>
-                    <input type="email" placeholder="john@email.com">
+                    <input type="email" name="email" placeholder="john@email.com" required>
                 </div>
 
                 <div class="input-group">
                     <label>Username</label>
-                    <input type="text" placeholder="john123">
+                    <input type="text" name="username" required>
                 </div>
 
                 <div class="input-row">
@@ -114,10 +114,7 @@
                         <label>Password</label>
                         <div class="password-box">
 
-                            <input
-                                type="password"
-                                id="password"
-                                placeholder="Password">
+                            <input type="password" name="password" required placeholder="Password">
 
                             <button
                                 type="button"
@@ -133,10 +130,8 @@
                     <div class="input-group">
                         <label>Confirm Password</label>
                         <div class="password-box">
-                            <input
-                                type="password"
-                                id="confirmPassword"
-                                placeholder="Confirm Password">
+
+                            <input type="password" name="confirm_password" required placeholder="Confirm Password">
 
                             <button
                                 type="button"
@@ -179,7 +174,7 @@
                 <div class="auth-footer">
                     <p>
                         Already have an account?
-                        <a href="login.html">Login</a>
+                        <a href="../login/login.php">Login</a>
                     </p>
                 </div>
             </form>
