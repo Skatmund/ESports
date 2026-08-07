@@ -30,7 +30,7 @@
         </div>
 
         <div class="nav-actions">
-            <a href="landingpage.html" class="btn btn-outline">Home</a>
+            <a href="../landingpage.html" class="btn btn-outline">Home</a>
         </div>
 
     </div>

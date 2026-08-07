@@ -1,6 +1,6 @@
 <?php
 
-require '../login/login-process.php';
+require '../config/database.php';
 
 // Get form data
 $firstName = trim($_POST['first_name']);
