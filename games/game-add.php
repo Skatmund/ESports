@@ -1,3 +1,9 @@
+<?php
+
+require "../config/database.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -105,7 +111,11 @@
 
         <!-- FORM -->
 
-        <form class="game-form">
+        <form
+            class="game-form"
+            action="game-add-process.php"
+            method="POST"
+            enctype="multipart/form-data">
 
             <!-- BASIC INFO -->
 
@@ -119,51 +129,61 @@
 
                         <label>Game Name</label>
 
-                        <input type="text"
-                               placeholder="Valorant">
-
+                        <input
+                            type="text"
+                            name="game_name"
+                            placeholder="Left 4 Dead 2"
+                            required>
                     </div>
 
                     <div class="form-group">
 
                         <label>Genre</label>
 
-                        <select>
-
-                            <option>FPS</option>
-                            <option>MOBA</option>
-                            <option>Battle Royale</option>
-                            <option>Sports</option>
-                            <option>Fighting</option>
-                            <option>Strategy</option>
-
-                        </select>
-
+                        <input
+                            type="text"
+                            name="genre"
+                            placeholder="FPS"
+                            required>
                     </div>
 
                     <div class="form-group">
 
                         <label>Developer</label>
 
-                        <input type="text"
-                               placeholder="Riot Games">
-
+                        <input
+                            type="text"
+                            name="developer"
+                            placeholder="Valve"
+                            required>
                     </div>
 
                     <div class="form-group">
 
                         <label>Release Year</label>
 
-                        <input type="number"
-                               placeholder="2020">
+                        <select name="release_year" required>
 
+                            <option value="">Select Year</option>
+
+                            <?php
+                            $currentYear = date("Y");
+
+                            for ($year = $currentYear; $year >= 1980; $year--) {
+                                echo "<option value='$year'>$year</option>";
+                            }
+                            ?>
+
+                        </select>
                     </div>
 
                     <div class="form-group">
 
                         <label>Platform</label>
 
-                        <select>
+                        <select name="platform" required>
+
+                            <option value="">Select Platform</option>
 
                             <option>PC</option>
                             <option>Mobile</option>
@@ -178,8 +198,10 @@
 
                         <label>Maximum Team Size</label>
 
-                        <input type="number"
-                               placeholder="5">
+                        <input
+                            type="number"
+                            name="max_team_size"
+                            required>
 
                     </div>
 
@@ -199,9 +221,12 @@
 
                     <h3>Upload Banner</h3>
 
-                    <p>PNG or JPG (Recommended: 1200 × 600)</p>
+                    <p>PNG, JPG, or JPEG (Recommended: 1200 × 600)</p>
 
-                    <input type="file">
+                    <input
+                        type="file"
+                        name="banner"
+                        accept=".png,.jpg,.jpeg">
 
                 </div>
 
@@ -213,8 +238,9 @@
 
                 <h2>Description</h2>
 
-                <textarea rows="7"
-                          placeholder="Enter a short description of the game..."></textarea>
+                <textarea
+                    name="description"
+                    rows="7"></textarea>
 
             </div>
 
@@ -230,7 +256,7 @@
 
                         <label>Match Format</label>
 
-                        <select>
+                        <select name="default_match_format">
 
                             <option>Best of 1</option>
                             <option>Best of 3</option>
@@ -244,7 +270,7 @@
 
                         <label>Bracket Type</label>
 
-                        <select>
+                        <select name="default_bracket_type">
 
                             <option>Single Elimination</option>
                             <option>Double Elimination</option>
