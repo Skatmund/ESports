@@ -1,0 +1,349 @@
+CREATE DATABASE esports;
+
+=====USERS=====
+
+CREATE TABLE users (
+
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+
+    first_name VARCHAR(50) NOT NULL,
+
+    last_name VARCHAR(50) NOT NULL,
+
+    username VARCHAR(50) NOT NULL UNIQUE,
+
+    email VARCHAR(100) NOT NULL UNIQUE,
+
+    password VARCHAR(255) NOT NULL,
+
+    role ENUM('Admin', 'Tournament Manager', 'Team Manager', 'Player')
+        NOT NULL DEFAULT 'Player',
+
+    profile_picture VARCHAR(255) DEFAULT 'default-profile.png',
+
+    status ENUM('Active', 'Suspended')
+        NOT NULL DEFAULT 'Active',
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        ON UPDATE CURRENT_TIMESTAMP
+
+);
+
+=====TEAMS=====
+
+CREATE TABLE teams (
+
+    team_id INT AUTO_INCREMENT PRIMARY KEY,
+
+    manager_id INT NOT NULL,
+
+    team_name VARCHAR(100) NOT NULL,
+
+    team_tag VARCHAR(5) NOT NULL,
+
+    organization VARCHAR(100),
+
+    captain_name VARCHAR(100),
+
+    contact_email VARCHAR(100),
+
+    contact_number VARCHAR(20),
+
+    logo VARCHAR(255) DEFAULT 'default-team.png',
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (manager_id)
+        REFERENCES users(user_id)
+        ON DELETE CASCADE
+
+);
+
+=====GAMES=====
+
+CREATE TABLE games (
+
+    game_id INT AUTO_INCREMENT PRIMARY KEY,
+
+    game_name VARCHAR(100) NOT NULL UNIQUE,
+
+    genre VARCHAR(100) NOT NULL,
+
+    developer VARCHAR(100) NOT NULL,
+
+    release_year YEAR NOT NULL,
+
+    platform ENUM(
+        'PC',
+        'Mobile',
+        'Console',
+        'Cross Platform'
+    ) NOT NULL,
+
+    max_team_size INT NOT NULL,
+
+    banner VARCHAR(255) DEFAULT 'default-game-banner.jpg',
+
+    description TEXT,
+
+    default_match_format ENUM(
+        'Best of 1',
+        'Best of 3',
+        'Best of 5'
+    ) NOT NULL DEFAULT 'Best of 3',
+
+    default_bracket_type ENUM(
+        'Single Elimination',
+        'Double Elimination',
+        'Round Robin'
+    ) NOT NULL DEFAULT 'Single Elimination',
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        ON UPDATE CURRENT_TIMESTAMP
+
+);
+
+=====PLAYERS=====
+
+CREATE TABLE players (
+
+    player_id INT AUTO_INCREMENT PRIMARY KEY,
+
+    team_id INT NULL,
+
+    game_id INT NOT NULL,
+
+    first_name VARCHAR(50) NOT NULL,
+
+    last_name VARCHAR(50) NOT NULL,
+
+    ign VARCHAR(50) NOT NULL,
+
+    username VARCHAR(50) NOT NULL UNIQUE,
+
+    email VARCHAR(100) NOT NULL UNIQUE,
+
+    contact_number VARCHAR(20),
+
+    player_role VARCHAR(50) NOT NULL,
+
+    current_rank VARCHAR(50) NOT NULL,
+
+    profile_picture VARCHAR(255) DEFAULT 'default-player.png',
+
+    biography TEXT,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        ON UPDATE CURRENT_TIMESTAMP,
+
+    CONSTRAINT fk_player_team
+        FOREIGN KEY (team_id)
+        REFERENCES teams(team_id)
+        ON DELETE SET NULL,
+
+    CONSTRAINT fk_player_game
+        FOREIGN KEY (game_id)
+        REFERENCES games(game_id)
+        ON DELETE RESTRICT
+
+);
+
+=====TOURNAMENTS=====
+
+CREATE TABLE tournaments (
+
+    tournament_id INT AUTO_INCREMENT PRIMARY KEY,
+
+    game_id INT NOT NULL,
+
+    tournament_name VARCHAR(150) NOT NULL,
+
+    description TEXT,
+
+    registration_deadline DATE NOT NULL,
+
+    start_date DATE NOT NULL,
+
+    start_time TIME NOT NULL,
+
+    venue VARCHAR(150) NOT NULL,
+
+    max_teams INT NOT NULL,
+
+    prize_pool DECIMAL(12,2) DEFAULT 0.00,
+
+    bracket_type VARCHAR(50) NOT NULL,
+
+    visibility ENUM('Public', 'Private') NOT NULL DEFAULT 'Public',
+
+    banner VARCHAR(255) DEFAULT 'default-tournament-banner.jpg',
+
+    status ENUM(
+        'Upcoming',
+        'Registration Open',
+        'Ongoing',
+        'Completed',
+        'Cancelled'
+    ) DEFAULT 'Upcoming',
+
+    created_by INT NOT NULL,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        ON UPDATE CURRENT_TIMESTAMP,
+
+    CONSTRAINT fk_tournament_game
+        FOREIGN KEY (game_id)
+        REFERENCES games(game_id)
+        ON DELETE RESTRICT,
+
+    CONSTRAINT fk_tournament_creator
+        FOREIGN KEY (created_by)
+        REFERENCES users(user_id)
+        ON DELETE RESTRICT
+
+);
+
+=====TEAMS TO MANY TOURNAMENTS=====
+
+CREATE TABLE tournament_teams (
+
+    tournament_team_id INT AUTO_INCREMENT PRIMARY KEY,
+
+    tournament_id INT NOT NULL,
+
+    team_id INT NOT NULL,
+
+    registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    status ENUM(
+        'Pending',
+        'Approved',
+        'Rejected',
+        'Withdrawn'
+    ) DEFAULT 'Pending',
+
+    CONSTRAINT fk_tt_tournament
+        FOREIGN KEY (tournament_id)
+        REFERENCES tournaments(tournament_id)
+        ON DELETE CASCADE,
+
+    CONSTRAINT fk_tt_team
+        FOREIGN KEY (team_id)
+        REFERENCES teams(team_id)
+        ON DELETE CASCADE,
+
+    UNIQUE (tournament_id, team_id)
+
+);
+
+=====BRACKETS=====
+
+CREATE TABLE brackets (
+
+    bracket_id INT AUTO_INCREMENT PRIMARY KEY,
+
+    tournament_id INT NOT NULL,
+
+    bracket_type VARCHAR(50) NOT NULL,
+
+    number_of_teams INT NOT NULL,
+
+    seeding_method VARCHAR(50) NOT NULL,
+
+    match_format VARCHAR(20) NOT NULL,
+
+    generated_by INT NOT NULL,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT fk_bracket_tournament
+        FOREIGN KEY (tournament_id)
+        REFERENCES tournaments(tournament_id)
+        ON DELETE CASCADE,
+
+    CONSTRAINT fk_bracket_user
+        FOREIGN KEY (generated_by)
+        REFERENCES users(user_id)
+        ON DELETE RESTRICT
+
+);
+
+=====BRACKET TEAMS=====
+
+CREATE TABLE bracket_teams (
+
+    bracket_team_id INT AUTO_INCREMENT PRIMARY KEY,
+
+    bracket_id INT NOT NULL,
+
+    team_id INT NOT NULL,
+
+    seed INT NOT NULL,
+
+    CONSTRAINT fk_bt_bracket
+        FOREIGN KEY (bracket_id)
+        REFERENCES brackets(bracket_id)
+        ON DELETE CASCADE,
+
+    CONSTRAINT fk_bt_team
+        FOREIGN KEY (team_id)
+        REFERENCES teams(team_id)
+        ON DELETE CASCADE
+
+);
+
+=====MATCHES=====
+
+CREATE TABLE matches (
+
+    match_id INT AUTO_INCREMENT PRIMARY KEY,
+
+    bracket_id INT NOT NULL,
+
+    round_number INT NOT NULL,
+
+    match_number INT NOT NULL,
+
+    team1_id INT NULL,
+
+    team2_id INT NULL,
+
+    winner_team_id INT NULL,
+
+    scheduled_date DATETIME NULL,
+
+    status ENUM(
+        'Pending',
+        'Ongoing',
+        'Completed'
+    ) DEFAULT 'Pending',
+
+    CONSTRAINT fk_match_bracket
+        FOREIGN KEY (bracket_id)
+        REFERENCES brackets(bracket_id)
+        ON DELETE CASCADE,
+
+    CONSTRAINT fk_match_team1
+        FOREIGN KEY (team1_id)
+        REFERENCES teams(team_id)
+        ON DELETE SET NULL,
+
+    CONSTRAINT fk_match_team2
+        FOREIGN KEY (team2_id)
+        REFERENCES teams(team_id)
+        ON DELETE SET NULL,
+
+    CONSTRAINT fk_match_winner
+        FOREIGN KEY (winner_team_id)
+        REFERENCES teams(team_id)
+        ON DELETE SET NULL
+
+);
