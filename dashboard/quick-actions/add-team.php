@@ -8,6 +8,12 @@ $games = $conn->query("
     ORDER BY game_name
 ");
 
+$players = $conn->query("
+    SELECT player_id, ign
+    FROM players
+    ORDER BY ign
+");
+
 ?>
 
 <!DOCTYPE html>
@@ -177,13 +183,18 @@ $games = $conn->query("
 
                 <h2>Team Logo</h2>
 
-                <div class="upload-box">
+                <div class="upload-box" id="uploadBox">
 
                     <i data-lucide="image-plus"></i>
 
-                    <p>Upload Team Logo</p>
+                    <p id="fileName">Upload Team Logo</p>
 
-                    <input type="file" name="logo">
+                    <input
+                        type="file"
+                        id="logo"
+                        name="logo"
+                        accept=".png,.jpg,.jpeg"
+                        hidden>
 
                 </div>
 
@@ -197,15 +208,32 @@ $games = $conn->query("
 
                 <div class="player-list">
 
-                    <input type="text" placeholder="Player 1">
-                    <input type="text" placeholder="Player 2">
-                    <input type="text" placeholder="Player 3">
-                    <input type="text" placeholder="Player 4">
+                <div class="player-list" id="playerList">
+
+                    <div class="player-list" id="playerList">
+
+                        <?php for($i = 1; $i <= 4; $i++) { ?>
+
+                            <select name="players[]">
+                                <option value="">Select Player</option>
+
+                                <?php while($player = $players->fetch_assoc()) { ?>
+                                    <option value="<?= $player['player_id']; ?>">
+                                        <?= htmlspecialchars($player['ign']); ?>
+                                    </option>
+                                <?php } ?>
+                            </select>
+
+                        <?php } ?>
+
+                    </div>
 
                 </div>
 
+                </div>
                 <button
                     type="button"
+                    id="addSubstitute"
                     class="secondary-btn">
 
                     + Add Substitute
@@ -242,11 +270,8 @@ $games = $conn->query("
 
 </div>
 
-<script>
-
-lucide.createIcons();
-
-</script>
+<script>lucide.createIcons();</script>
+<script src="../../assets/js/add-player.js"></script>
 
 </body>
 
