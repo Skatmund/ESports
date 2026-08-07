@@ -1,3 +1,15 @@
+<?php
+
+require '../../config/database.php';
+
+$games = $conn->query("
+    SELECT game_id, game_name
+    FROM games
+    ORDER BY game_name
+");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -92,7 +104,11 @@
 
         </header>
 
-        <form class="team-form">
+        <form
+            class="team-form"
+            action="add-team-process.php"
+            method="POST"
+            enctype="multipart/form-data">
 
             <!-- TEAM INFO -->
 
@@ -104,46 +120,51 @@
 
                     <div class="form-group">
                         <label>Team Name</label>
-                        <input type="text">
+                        <input type="text" name="team_name">
                     </div>
 
                     <div class="form-group">
                         <label>Team Tag</label>
-                        <input type="text" maxlength="5">
+                        <input type="text" name="team_tag">
                     </div>
 
                     <div class="form-group">
                         <label>Game</label>
 
-                        <select>
+                    <select name="game_id" required>
 
-                            <option>Valorant</option>
-                            <option>CS2</option>
-                            <option>Dota 2</option>
-                            <option>League of Legends</option>
+                        <?php while($game = $games->fetch_assoc()) { ?>
 
-                        </select>
+                            <option value="<?= $game['game_id']; ?>">
+
+                                <?= htmlspecialchars($game['game_name']); ?>
+
+                            </option>
+
+                        <?php } ?>
+
+                    </select>
 
                     </div>
 
                     <div class="form-group">
                         <label>Captain</label>
-                        <input type="text">
+                        <input type="text" name="captain">
                     </div>
 
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email">
+                        <input type="email" name="email">
                     </div>
 
                     <div class="form-group">
                         <label>Contact Number</label>
-                        <input type="text">
+                        <input type="text" name="contact_number">
                     </div>
 
                     <div class="form-group">
                         <label>Organization</label>
-                        <input type="text">
+                        <input type="text" name="organization">
                     </div>
 
                 </div>
@@ -162,7 +183,7 @@
 
                     <p>Upload Team Logo</p>
 
-                    <input type="file">
+                    <input type="file" name="logo">
 
                 </div>
 
