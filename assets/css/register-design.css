@@ -300,3 +300,20 @@ body{
 .auth-footer a:hover {
     color: #60a5fa;
 }
+
+.auth-btn:disabled{
+
+    opacity: .5;
+    cursor: not-allowed;
+    transform: none;
+
+}
+
+.auth-btn:disabled:hover{
+
+    transform: none;
+    box-shadow: none;
+    background:#2563eb;
+    color:white;
+
+}

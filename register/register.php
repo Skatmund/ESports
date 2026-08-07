@@ -158,18 +158,24 @@
 
                 </div>
 
-                <div class="checkbox-group">
+                <label class="checkbox-container">
 
-                    <input type="checkbox">
+                    <input
+                        type="checkbox"
+                        id="termsCheckbox"
+                        required>
+                    <a>I agree to the Terms & Conditions and Privacy Policy</a>
 
-                    <label>
-                        I agree to the Terms and Privacy Policy
-                    </label>
+                </label>
 
-                </div>
+                <button
+                    type="submit"
+                    class="btn btn-primary auth-btn"
+                    id="createAccountBtn"
+                    disabled>
 
-                <button class="btn btn-primary auth-btn">
                     Create Account
+
                 </button>
                 <div class="auth-footer">
                     <p>
@@ -186,7 +192,8 @@
 </div>
 
 <script src="https://unpkg.com/lucide@latest"></script>
-<script src="assets/js/auth.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script src="../assets/js/terms-policy.js"></script>
 
 </body>
 </html>
